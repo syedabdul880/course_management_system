@@ -23,9 +23,10 @@ This project demonstrates the following C programming concepts:
 - **String Handling:** To process IDs and names.
 - **File Handling:** To save and load records using binary files.
 
-## Main Features
+## Main Features:
 
 The system provides the following features:
+
 
 1. **Add New Course:** Add a course with its ID, name, and credit hours.
 2. **View Courses:** Display all available courses.
