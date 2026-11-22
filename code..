@@ -59,7 +59,7 @@ void updateCourse(void);
 void updateStudentName(void);
 
 
-/* Get input from user */
+/* Get input from a user */
 int getInput(char prompt[], char input[], int size)
 {
     char line[256];
