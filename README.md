@@ -17,7 +17,7 @@ This project demonstrates the following C programming concepts:
 - **Structures:** To store course and student registration information.
 - **Arrays:** To store multiple course and registration records.
 - **Pointers:** To search and access records.
-- **Functions:** To divide the program into smaller, manageable tasks.
+- **Functions:** To divide the program into smaller,manageable tasks.
 - **Loops:** To repeat menu operations and search records.
 - **Conditional Statements:** To make decisions based on user input.
 - **String Handling:** To process IDs and names.
