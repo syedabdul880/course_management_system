@@ -1,6 +1,5 @@
 # course_management_system
 Menu-driven Course Registration Management System in C (CS-115, NED)
-Here is a complete, copy-ready README file for your GitHub repository. It includes the project introduction, features, compilation instructions, menu options, working, and C concepts.
 
 # Course Registration Management System
 
