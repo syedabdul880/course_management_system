@@ -11,7 +11,7 @@ A menu-driven Course Registration Management System developed in C for **CS-115 
 | Syeda Mahnoor Hashmi | CS-26052 | B |
 | Hadia Khan | CS-26064 | B |
 
-**Instructor:** Hameeza Ahmed
+**Instructor:** MISS MAHNOOR
 
 ## Project Overview
 
