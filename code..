@@ -1,5 +1,6 @@
 /*
- * Course Registration Management System 
+ * Course Registration Management System
+ 
  */
 
 #include <stdio.h>
@@ -912,7 +913,7 @@ void removeRegistration(void)
 }
 
 
-/* Main menu */
+/* Main menu - Functions */
 int main(void)
 {
     int choice = 0;
