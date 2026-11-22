@@ -1,83 +1,81 @@
-# course_management_system
-Menu-driven Course Registration Management System in C (CS-115, NED)
-
 # Course Registration Management System
 
-## Project Overview:
+A menu-driven Course Registration Management System developed in C for **CS-115 Computer Programming** (Open Ended Lab / Complex Engineering Problem), Department of Computer & Information Systems Engineering, **NED University of Engineering and Technology**, FE Batch 2026, Fall Semester 2026.
 
-The **Course Registration Management System** is a menu-driven application developed in the C programming language. It is designed to manage university courses and student registrations.
+## Group Members
 
-The system allows users to add, view, search, update, and delete courses and student registrations. It also uses file handling to save records permanently, so data remains available even after closing and reopening the program.
+| Name | Roll No. | Section |
+| --- | --- | --- |
+| Muhammad Rohaan Azhar | CS-26042 | A |
+| Abd Ur Rehman | CS-26038 | A |
+| Syeda Mahnoor Hashmi | CS-26052 | B |
+| Hadia Khan | CS-26064 | B |
 
-## Technologies and Concepts Used
+**Instructor:** Hameeza Ahmed
 
-This project demonstrates the following C programming concepts:
+## Project Overview
 
-- **Structures:** To store course and student registration information.
-- **Arrays:** To store multiple course and registration records.
-- **Pointers:** To search and access records.
-- **Functions:** To divide the program into smaller,manageable tasks.
-- **Loops:** To repeat menu operations and search records.
-- **Conditional Statements:** To make decisions based on user input.
-- **String Handling:** To process IDs and names.
-- **File Handling:** To save and load records using binary files.
+This console application manages courses and student registrations. A user can add, view, search, update and delete records through a text menu. All records are saved to binary files, so data remains available after the program is closed and reopened.
 
-## Main Features:
+## Main Features
 
-The system provides the following features:
-
-
-1. **Add New Course:** Add a course with its ID, name, and credit hours.
+1. **Add New Course:** Add a course with its ID, name and credit hours.
 2. **View Courses:** Display all available courses.
 3. **Register Student:** Register a student in an existing course.
-4. **View Registrations:** Display students along with their registered courses.
-5. **Search Course:** Search for a course using its course ID.
-6. **Search Student:** Search for a student using their student ID.
-7. **Delete Course:** Delete a course and its related registrations.
-8. **Delete Student Registration:** Remove a student's registration from a particular course.
+4. **View Registrations:** Display each student with their registered courses.
+5. **Search Course:** Search for a course by course ID.
+6. **Search Student:** Search for a student by student ID.
+7. **Delete Course:** Delete a course and all registrations linked to it.
+8. **Delete Student Registration:** Remove a student from a particular course.
 9. **Update Course:** Update the course name or credit hours.
-10. **Update Student Name:** Change a student's name in all their registrations.
-11. **Exit:** Save all records and close the application.
+10. **Update Student Name:** Change a student's name in all of their registrations.
+11. **Exit:** Save all records and close the program.
+
+## C Concepts Demonstrated
+
+- **Data types and operators:** integers, character arrays, arithmetic, comparison and logical operators
+- **Decision making:** `if`, `else if`, `else` and `switch`
+- **Loops:** `for`, `while` and `do-while`
+- **User-defined functions:** each operation is a separate function
+- **Arrays:** fixed-size arrays of structures
+- **Strings:** IDs and names handled with `strlen()`, `strcpy()` and `strcmp()`
+- **Pointers:** accessing records and returning a matching course from the search function
+- **Structures:** `Course` and `Registration` records
+- **File I/O:** binary files with `fopen()`, `fread()`, `fwrite()` and `fclose()`
 
 ## How to Compile and Run
 
 ### Requirements
 
-- GCC Compiler
-- Visual Studio Code or any C compiler
-- C programming environment
+- GCC compiler (for example MinGW on Windows)
+- Any terminal or Visual Studio Code
 
-### Step 1: Compile the Program. 
+### Compile
 
-Open the terminal in the project directory and execute:
-
-```bash
-gcc main.c -o course
+```
+gcc course_registration.c -o course
 ```
 
-### Step 2: Run the Program
+### Run
 
-**For Windows:**
+**Windows:**
 
-```bash
+```
 .\course.exe
 ```
 
-**For Linux:**
+**Linux / macOS:**
 
-```bash
+```
 ./course
 ```
 
-## How to Use the Program
+## Menu
 
-After running the executable file, the main menu will appear.
-
-```text
+```
 ========================================
        COURSE REGISTRATION SYSTEM
 ========================================
-
 1. Add New Course
 2. View Courses
 3. Register Student
@@ -89,111 +87,88 @@ After running the executable file, the main menu will appear.
 9. Update Course
 10. Update Student Name
 11. Exit
-
 Enter your choice:
 ```
 
-Enter the number corresponding to the operation you want to perform.
+## Example Usage
 
-### Example Usage
+**Add a course**
 
-**1. Add a Course**
-
-```text
-Enter Course ID: CP101
-Enter Course Name: Programming Fundamentals
+```
+Enter Course ID: CS101
+Enter Course Name: Introduction to Programming
 Enter Credit Hours: 3
-
 Course added successfully!
 ```
 
-**2. Register a Student**
+**Register a student**
 
-```text
-Enter Student ID: 038
-Enter Student Name: Abdul Rehman
-Enter Course ID: CP101
-
+```
+Enter Student ID: CS26042
+Enter Student Name: Muhammad Rohaan Azhar
+Enter Course ID: CS101
 Student registered successfully!
 ```
 
-**3. Search for a Student**
+**Search for a student**
 
-```text
-Enter Student ID to search: 038
+```
+Enter Student ID to search: CS26042
 
 ========== STUDENT DETAILS ==========
-
-Student ID: 038
-Student Name: Abdul Rehman
+Student ID: CS26042
+Student Name: Muhammad Rohaan Azhar
 
 Registered Courses:
-- Programming Fundamentals (Course ID: CP101)
+- Introduction to Programming (Course ID: CS101)
 ```
 
-## Data Storage and File Handling
+## Data Storage
 
-The project uses two binary files to store information permanently.
+Two binary files store the data. They are created automatically in the program's working directory when records are first saved, so they do not need to be created manually.
 
-| File Name | Purpose |
-|---|---|
-| `courses.dat` | Stores course IDs, course names, and credit hours. |
-| `registrations.dat` | Stores student IDs, student names, and course IDs. |
+| File | Contents |
+| --- | --- |
+| `courses.dat` | Course ID, course name and credit hours |
+| `registrations.dat` | Student ID, student name and course ID |
 
-### How Data Persistence Works
-
-- When the program starts, `loadRecords()` loads previously saved records.
-- When a course or registration is added, updated, or deleted, `saveRecords()` saves the changes.
-- When the user exits, the program saves all records again.
-- When the program is opened again, the saved records are loaded automatically.
-
-This ensures that information is not lost when the application is closed.
+- `loadRecords()` runs at startup and loads saved records.
+- `saveRecords()` runs after every add, update or delete, and on exit.
+- The stored record counts are checked against the array limits before loading.
 
 ## Input Validation
 
-The program includes several input validation checks:
+- IDs cannot be empty and may contain only letters and digits
+- IDs are converted to uppercase automatically
+- Duplicate course IDs are rejected
+- A student cannot register for a course that does not exist
+- The same student cannot register twice in the same course
+- A student ID cannot be used with a different name
+- Course and student names cannot be blank
+- Credit hours must be a whole number greater than zero
+- Non-numeric or invalid menu input is rejected
 
-- Course IDs and student IDs cannot be empty.
-- IDs can contain only letters and numbers.
-- IDs are automatically converted to uppercase.
-- Duplicate course IDs are not allowed.
-- Students cannot register for a course that does not exist.
-- Duplicate registrations are prevented.
-- Course names and student names cannot be empty.
-- Credit hours must be greater than zero.
-- Invalid menu choices are rejected.
+## Limitations
 
-## Project Limitations
-
-- Maximum number of courses: 100.
-- Maximum number of registrations: 200.
-- Maximum course ID and student ID length: 19 characters.
-- Maximum course name and student name length: 49 characters.
-- The application is currently terminal-based and does not include a graphical user interface.
+- Maximum 100 courses and 200 registrations
+- Maximum ID length: 19 characters; maximum name length: 49 characters
+- Console interface only (no GUI)
+- Data is stored in binary files, not a database
+- No login or user roles
 
 ## Project Structure
 
-```text
-Course-Registration-System/
-│
-├── main.c
-├── courses.dat
-├── registrations.dat
+```
+course_management_system/
+├── course_registration.c
 └── README.md
 ```
 
-**Note:** The two `.dat` files are created automatically when records are saved. They do not need to be created manually.
+`courses.dat` and `registrations.dat` are generated when the program runs.
 
-## Conclusion
+## Tools Used
 
-The Course Registration Management System is a practical C programming project that demonstrates the implementation of fundamental programming concepts in a real-world university management scenario.
-
-It combines structures, arrays, pointers, functions, loops, string handling, and file handling to provide an organized way to manage courses and student registrations.
-
-The project also demonstrates how data can be stored permanently using binary files, making the application useful beyond a single program execution.
-
----
-
-**Developed Using:** C Programming Language
-**Project Type:** Console-Based Application
-**Data Storage:** Binary File Handling
+- Language: C
+- Compiler: GCC (MinGW.org GCC-6.3.0-1)
+- Editor: Visual Studio Code
+- Platform: Windows 10
