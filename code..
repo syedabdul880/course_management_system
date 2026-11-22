@@ -1,5 +1,5 @@
 /*
- * Course Registration Management System
+ * Course Registration Management System:
  
  */
 
@@ -60,7 +60,7 @@ void updateCourse(void);
 void updateStudentName(void);
 
 
-/* Get input from a user */
+/* To get input from a user: */
 int getInput(char prompt[], char input[], int size)
 {
     char line[256];
