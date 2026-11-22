@@ -47,7 +47,7 @@ The system provides the following features:
 - Visual Studio Code or any C compiler
 - C programming environment
 
-### Step 1: Compile the Program
+### Step 1: Compile the Program. 
 
 Open the terminal in the project directory and execute:
 
