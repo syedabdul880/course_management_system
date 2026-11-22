@@ -4,7 +4,7 @@ Here is a complete, copy-ready README file for your GitHub repository. It includ
 
 # Course Registration Management System
 
-## Project Overview
+## Project Overview:
 
 The **Course Registration Management System** is a menu-driven application developed in the C programming language. It is designed to manage university courses and student registrations.
 
