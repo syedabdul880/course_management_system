@@ -29,7 +29,7 @@ struct Registration {
     char courseID[ID_SIZE];
 };
 
-/* Arrays for a course and registration records */
+/* Arrays for course and registration records */
 struct Course courses[COURSE_LIMIT];
 struct Registration registrations[REGISTRATION_LIMIT];
 
